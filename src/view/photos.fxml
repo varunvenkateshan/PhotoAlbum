@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Code by: Varun Venkateshan and Yashwant Balaji -->
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PhotoController" prefHeight="700.0" prefWidth="1000.0">
+    <SplitPane prefHeight="700" prefWidth="700" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="300" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0">
+        <AnchorPane prefWidth="700" prefHeight="700" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+            <children>
+                <GridPane prefWidth="600" prefHeight="50" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="640" AnchorPane.rightAnchor="50" AnchorPane.leftAnchor="50">
+                    <Label fx:id="albumName" text="Photos In Your Album" alignment="TOP_CENTER" contentDisplay="CENTER" />
+                </GridPane>
+                <GridPane prefWidth="600" prefHeight="50" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="590">
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="75"/>
+                        <ColumnConstraints prefWidth="100"/>
+                        <ColumnConstraints prefWidth="75"/>
+                        <ColumnConstraints prefWidth="100"/>
+                        <ColumnConstraints prefWidth="75"/>
+                        <ColumnConstraints prefWidth="100"/>
+                        <ColumnConstraints prefWidth="75"/>
+                    </columnConstraints>
+                    <Button fx:id="logout_btn" text="BACK" prefWidth="100" alignment="CENTER" GridPane.columnIndex="1" onAction="#logout"/>
+                    <Button text="SLIDESHOW" prefWidth="100" alignment="CENTER" GridPane.columnIndex="3" onAction="#viewSlideshow"/>
+                    <Button text="ADD" prefWidth="100" alignment="CENTER" GridPane.columnIndex="5" onAction="#addPhoto"/>
+                </GridPane>
+                <ScrollPane fx:id="scroll" AnchorPane.bottomAnchor="50" AnchorPane.topAnchor="120" AnchorPane.rightAnchor="50" AnchorPane.leftAnchor="50">
+                    <GridPane fx:id="grid" prefWidth="570" minHeight="600" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="190"/>
+                            <ColumnConstraints prefWidth="190"/>
+                            <ColumnConstraints prefWidth="190"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="200"/>
+                        </rowConstraints>
+                    </GridPane>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </SplitPane>
+
+    <SplitPane prefHeight="700" prefWidth="300" AnchorPane.leftAnchor="700" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0">
+        <AnchorPane prefWidth="300" prefHeight="700" AnchorPane.leftAnchor="700" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0" >
+            <GridPane prefWidth="300" prefHeight="50" AnchorPane.bottomAnchor="640" AnchorPane.topAnchor="10" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+                <Label text="Photo Display" alignment="TOP_CENTER" contentDisplay="CENTER"/>
+            </GridPane>
+            <GridPane prefHeight="200" prefWidth="250" AnchorPane.leftAnchor="25" AnchorPane.rightAnchor="25" AnchorPane.topAnchor="70" AnchorPane.bottomAnchor="430">
+                <ImageView fx:id="display_image" fitHeight="200" fitWidth="250" preserveRatio="true"/>
+            </GridPane>
+            <GridPane prefHeight="190" prefWidth="300" AnchorPane.bottomAnchor="240" AnchorPane.topAnchor="270" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+                <rowConstraints>
+                    <RowConstraints prefHeight="70"/>
+                    <RowConstraints prefHeight="10"/>
+                    <RowConstraints prefHeight="30"/>
+                    <RowConstraints prefHeight="10"/>
+                    <RowConstraints prefHeight="70"/>
+                </rowConstraints>
+                <Label fx:id="photos_caption" text="Caption: " alignment="TOP_CENTER" contentDisplay="CENTER" GridPane.rowIndex="0"/>
+                <Label fx:id="photos_date" text="Date: " alignment="TOP_CENTER" contentDisplay="CENTER" GridPane.rowIndex="2"/>
+                <Label fx:id="photos_tags" text="Tags: " alignment="TOP_CENTER" contentDisplay="CENTER" GridPane.rowIndex="4"/>
+            </GridPane>
+            <GridPane prefHeight="190" prefWidth="300" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="460" AnchorPane.bottomAnchor="50">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="15"/>
+                    <ColumnConstraints prefWidth="80"/>
+                    <ColumnConstraints prefWidth="15"/>
+                    <ColumnConstraints prefWidth="80"/>
+                    <ColumnConstraints prefWidth="15"/>
+                    <ColumnConstraints prefWidth="80"/>
+                    <ColumnConstraints prefWidth="15"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="95"/>
+                    <RowConstraints prefHeight="95"/>
+                </rowConstraints>
+                <Button text="EDIT" prefWidth="80" GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#editCaption"/>
+                <Button text="DELETE" prefWidth="80" GridPane.rowIndex="0" GridPane.columnIndex="3" onAction="#deletePhoto"/>
+                <Button text="ADD TAG" prefWidth="80" GridPane.rowIndex="0" GridPane.columnIndex="5" onAction="#addTag"/>
+                <Button text="DEL TAG" prefWidth="80" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#deleteTag"/>
+                <Button text="COPY" prefWidth="80" GridPane.rowIndex="1" GridPane.columnIndex="3" onAction="#copyPhoto"/>
+                <Button text="MOVE" prefWidth="80" GridPane.rowIndex="1" GridPane.columnIndex="5" onAction="#movePhoto"/>
+            </GridPane>
+        </AnchorPane>
+    </SplitPane>
+
+</AnchorPane>

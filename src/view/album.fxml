@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Code by: Varun Venkateshan and Yashwant Balaji -->
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AlbumController" prefHeight="700.0" prefWidth="700.0">
+    <children>
+        <GridPane prefWidth="600" prefHeight="50" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="640" AnchorPane.rightAnchor="50" AnchorPane.leftAnchor="50">
+            <Label fx:id="username" text="Albums In Your Library - Double Click to Enter Album" alignment="CENTER" />
+        </GridPane>
+        <GridPane prefWidth="600" prefHeight="50" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="590">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="100"/>
+                <ColumnConstraints prefWidth="25"/>
+                <ColumnConstraints prefWidth="100"/>
+                <ColumnConstraints prefWidth="25"/>
+                <ColumnConstraints prefWidth="100"/>
+                <ColumnConstraints prefWidth="25"/>
+                <ColumnConstraints prefWidth="100"/>
+                <ColumnConstraints prefWidth="25"/>
+                <ColumnConstraints prefWidth="100"/>
+            </columnConstraints>
+            <Button fx:id="logout_btn" text="LOGOUT" prefWidth="100" alignment="CENTER" GridPane.columnIndex="0" onAction="#logout"/>
+            <Button text="ADD" prefWidth="100" alignment="CENTER" GridPane.columnIndex="2" onAction="#addAlbum"/>
+            <Button text="EDIT" prefWidth="100" alignment="CENTER" GridPane.columnIndex="4" onAction="#editAlbum"/>
+            <Button text="DELETE" prefWidth="100" alignment="CENTER" GridPane.columnIndex="6" onAction="#deleteAlbum"/>
+            <Button text="SEARCH" prefWidth="100" alignment="CENTER" GridPane.columnIndex="8" onAction="#searchPhotos"/>
+        </GridPane>
+        <ScrollPane fx:id="scroll" AnchorPane.bottomAnchor="50" AnchorPane.topAnchor="120" AnchorPane.rightAnchor="50" AnchorPane.leftAnchor="50">
+            <GridPane fx:id="grid" prefWidth="570" minHeight="600" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="190"/>
+                    <ColumnConstraints prefWidth="190"/>
+                    <ColumnConstraints prefWidth="190"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="200"/>
+                </rowConstraints>
+            </GridPane>
+        </ScrollPane>
+    </children>
+</AnchorPane>
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Code by: Varun Venkateshan and Yashwant Balaji -->
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image.*?>
+<?import javafx.scene.image.ImageView.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane prefHeight="500.0" prefWidth="700" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SlideshowController">
+    <children>
+        <Button text="BACK" prefWidth="100" onAction="#backToPhotos"/>
+        <SplitPane prefWidth="385" prefHeight="280" AnchorPane.bottomAnchor="210" AnchorPane.leftAnchor="157.5" AnchorPane.rightAnchor="157.5" AnchorPane.topAnchor="10">
+            <items>
+                <ImageView fx:id = "Image" fitHeight="250" fitWidth="385" preserveRatio="true"/>
+            </items>
+        </SplitPane>
+
+        <SplitPane prefWidth="385" prefHeight="250" AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="157.5" AnchorPane.rightAnchor="157.5" AnchorPane.topAnchor="310">
+            <AnchorPane prefWidth="385" prefHeight="250" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+                <children>
+                    <GridPane prefWidth="385" prefHeight="215" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+                        <rowConstraints>
+                            <RowConstraints prefHeight="90"/>
+                            <RowConstraints prefHeight="35"/>
+                            <RowConstraints prefHeight="90"/>
+                        </rowConstraints>
+                        <Label fx:id="slideshow_caption" text="Caption: " alignment="TOP_CENTER" contentDisplay="CENTER" GridPane.rowIndex="0"/>
+                        <Label fx:id="slideshow_date" text="Date: " alignment="TOP_CENTER" contentDisplay="CENTER" GridPane.rowIndex="1"/>
+                        <Label fx:id="slideshow_tags" text="Tags: " alignment="TOP_CENTER" contentDisplay="CENTER" GridPane.rowIndex="2"/>
+                    </GridPane>
+                    <!--<Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Caption: " prefHeight="20" prefWidth="385" AnchorPane.bottomAnchor="130" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0"/>
+                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Date: " prefHeight="20" prefWidth="385" AnchorPane.bottomAnchor="110" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0"/>
+                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Tags: " prefHeight="20" prefWidth="385" AnchorPane.bottomAnchor="90" AnchorPane.topAnchor="40" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0"/>-->
+                    <GridPane prefHeight="35" prefWidth="385" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="215" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="77" />
+                            <ColumnConstraints prefWidth="77" />
+                            <ColumnConstraints prefWidth="77" />
+                            <ColumnConstraints prefWidth="77" />
+                            <ColumnConstraints prefWidth="77" />
+                        </columnConstraints>
+                        <children>
+                            <Button fx:id="previous_btn" text="Previous" prefWidth="77" GridPane.columnIndex="1" onAction="#previousPhoto"/>
+                            <Button fx:id="next_btn" text="Next" prefWidth="77" GridPane.columnIndex="3" onAction="#nextPhoto"/>
+                        </children>
+                    </GridPane>
+                </children>
+            </AnchorPane>
+        </SplitPane>
+    </children>
+</AnchorPane>
+

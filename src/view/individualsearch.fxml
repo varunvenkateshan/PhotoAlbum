@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Code by: Varun Venkateshan and Yashwant Balaji -->
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.IndividualSearchController" prefHeight="400.0" prefWidth="600.0">
+    <GridPane fx:id="search_grid" prefWidth="200" prefHeight="200" visible="false">
+        <rowConstraints>
+            <RowConstraints prefHeight="100"/>
+            <RowConstraints prefHeight="33"/>
+            <RowConstraints prefHeight="34"/>
+            <RowConstraints prefHeight="33"/>
+        </rowConstraints>
+        <ImageView fx:id ="ind_search_image" fitHeight="100" GridPane.rowIndex="0" preserveRatio="true"/>
+        <Label fx:id="ind_search_label" text="Caption: " GridPane.rowIndex="2" alignment="TOP_CENTER" contentDisplay="CENTER"/>
+    </GridPane>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Code by: Varun Venkateshan and Yashwant Balaji -->
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="700" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+        <SplitPane prefWidth="500" prefHeight="50" AnchorPane.bottomAnchor="300" AnchorPane.topAnchor="50" AnchorPane.rightAnchor="100" AnchorPane.leftAnchor="100">
+            <GridPane prefHeight="50" prefWidth="500" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="162.5"/>
+                    <ColumnConstraints prefWidth="175"/>
+                    <ColumnConstraints prefWidth="162.5"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="16"/>
+                    <RowConstraints prefHeight="18"/>
+                    <RowConstraints prefHeight="16"/>
+                </rowConstraints>
+                <Label text="Log Into Your Photos Account" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1"></Label>
+            </GridPane>
+        </SplitPane>
+
+        <GridPane prefHeight="125"  prefWidth="700" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="100" AnchorPane.bottomAnchor="175">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="250"/>
+                <ColumnConstraints prefWidth="80"/>
+                <ColumnConstraints prefWidth="120"/>
+                <ColumnConstraints prefWidth="250"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="50"/>
+                <RowConstraints prefHeight="25"/>
+                <RowConstraints prefHeight="50"/>
+            </rowConstraints>
+            <Label text="Username:" textAlignment="LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2"></Label>
+            <TextField fx:id="login" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        </GridPane>
+
+        <GridPane prefWidth="700" prefHeight="125" AnchorPane.bottomAnchor="50" AnchorPane.topAnchor="225" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+            <rowConstraints>
+                <RowConstraints prefHeight="75"/>
+                <RowConstraints prefHeight="25"/>
+                <RowConstraints prefHeight="25"/>
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints prefWidth="300"/>
+                <ColumnConstraints prefWidth="100"/>
+                <ColumnConstraints prefWidth="300"/>
+            </columnConstraints>
+            <Button fx:id="login_btn" text="Login" textAlignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="100" onAction="#login"></Button>
+        </GridPane>
+
+    </children>
+</AnchorPane>

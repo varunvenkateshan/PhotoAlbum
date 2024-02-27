@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Code by: Varun Venkateshan and Yashwant Balaji -->
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.IndividualPhotosController" prefHeight="400.0" prefWidth="600.0">
+    <GridPane fx:id="photo_grid" prefWidth="200" prefHeight="200" visible="false">
+        <rowConstraints>
+            <RowConstraints prefHeight="100"/>
+            <RowConstraints prefHeight="10"/>
+            <RowConstraints prefHeight="80"/>
+            <RowConstraints prefHeight="10"/>
+        </rowConstraints>
+        <ImageView fx:id ="ind_photos_image" fitHeight="100" GridPane.rowIndex="0" preserveRatio="true"/>
+        <Label fx:id="ind_caption_label" text="Caption: " GridPane.rowIndex="2" alignment="TOP_CENTER" contentDisplay="CENTER"/>
+    </GridPane>
+</AnchorPane>

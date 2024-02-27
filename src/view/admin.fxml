@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Code by: Varun Venkateshan and Yashwant Balaji -->
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="700" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+    <children>
+        <!-- This SplitPane is the ListView on the left side of the GUI-->
+        <SplitPane prefHeight="440" prefWidth="225" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="445" AnchorPane.rightAnchor="30" AnchorPane.topAnchor="30">
+            <items>
+                <AnchorPane prefHeight="440" prefWidth="225" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0">
+                    <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Users" prefHeight="20" prefWidth="305" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0"/>
+                        <ListView fx:id="user_listview" prefWidth="305" prefHeight="420" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="0"/>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+
+        <!-- This SplitPane is the Add Songs on the bottom right side of the GUI-->
+        <SplitPane prefWidth="385" prefHeight="205" AnchorPane.bottomAnchor="147.5" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="285" AnchorPane.topAnchor="147.5">
+            <AnchorPane prefWidth="385" prefHeight="205" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+                <children>
+                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Add/Delete Users" prefHeight="20" prefWidth="385" AnchorPane.bottomAnchor="185" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0"/>
+                    <GridPane prefWidth="385" prefHeight="150" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="35">
+                        <columnConstraints>
+
+                            <ColumnConstraints prefWidth="360"/>
+                            <ColumnConstraints prefWidth="20"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="37.5"/>
+                            <RowConstraints prefHeight="37.5"/>
+                            <RowConstraints prefHeight="37.5"/>
+                            <RowConstraints prefHeight="37.5"/>
+                        </rowConstraints>
+                        <children>
+                            <TextField fx:id="add" GridPane.columnIndex="0" GridPane.rowIndex="0" visible="true" />
+                            <TextField fx:id="delete" GridPane.rowIndex="3" GridPane.columnIndex="0" visible="true" />
+                            <Button fx:id="add_btn" text="Add" prefWidth="100" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#add"/>
+                            <Button fx:id="delete_btn" text="Delete" prefWidth="100" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#delete"/>
+                        </children>
+                    </GridPane>
+                    <GridPane prefHeight="35" prefWidth="305" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="170" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="102.5" />
+                            <ColumnConstraints prefWidth="50" />
+                            <ColumnConstraints prefWidth="102.5" />
+                        </columnConstraints>
+                        <children>
+                            <Button fx:id="logout_btn" text="Logout" prefWidth="100" GridPane.columnIndex="2" onAction="#logout"/>
+                        </children>
+                    </GridPane>
+                </children>
+            </AnchorPane>
+        </SplitPane>
+    </children>
+</AnchorPane>

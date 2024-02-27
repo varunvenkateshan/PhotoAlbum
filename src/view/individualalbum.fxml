@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Code by: Varun Venkateshan and Yashwant Balaji -->
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.IndividualAlbumController" prefHeight="400.0" prefWidth="600.0">
+    <GridPane fx:id="album_grid" prefWidth="200" prefHeight="260" visible="false">
+        <rowConstraints>
+            <RowConstraints prefHeight="100"/>
+            <RowConstraints prefHeight="63"/>
+            <RowConstraints prefHeight="34"/>
+            <RowConstraints prefHeight="63"/>
+        </rowConstraints>
+        <ImageView fx:id ="image" fitHeight="100" GridPane.rowIndex="0" preserveRatio="true"/>
+        <Label fx:id="album_name_text" text="" GridPane.rowIndex="1" alignment="TOP_CENTER" contentDisplay="CENTER"/>
+        <Label fx:id="number_of_pics" text="No Pictures in this album" GridPane.rowIndex="2" alignment="TOP_CENTER" contentDisplay="CENTER"/>
+        <Label fx:id="dates_of_pics" text="N/A" GridPane.rowIndex="3" alignment="TOP_CENTER" contentDisplay="CENTER"/>
+    </GridPane>
+</AnchorPane>
